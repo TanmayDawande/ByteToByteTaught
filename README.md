@@ -30,8 +30,8 @@ Clone the repository to your local machine:
 
 Bash
 
-git clone https://github.com/TanmayDawande/ByteByteTaught.git
-cd ByteByteTaught
+'''git clone https://github.com/TanmayDawande/ByteByteTaught.git
+cd ByteByteTaught'''
 Create a virtual environment and activate it (optional but recommended):
 
 Bash
