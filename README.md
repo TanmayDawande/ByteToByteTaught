@@ -1,91 +1,113 @@
-AI Recipe Generator
+AI Recipe Generator 🍳
 <p align="center">
 <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit Badge">
 <img src="https://img.shields.io/badge/Google_Gemini-3F83F8?style=for-the-badge&logo=google&logoColor=white" alt="Gemini API Badge">
 </p>
 
-This is a simple yet powerful AI-powered recipe generator built with Streamlit and the Google Gemini API. It allows users to get healthy and personalized recipe ideas by simply typing in a few ingredients or their meal preferences.
+Tired of staring at your fridge wondering what to make? This AI-powered recipe generator, built with Streamlit and the Google Gemini API, creates healthy and personalized recipes from the ingredients you already have.
+
+A quick demo of the AI Recipe Generator in action.
 
 ✨ Features
-Intelligent Recipe Generation: Uses the advanced Gemini model to create unique recipes.
+👨‍🍳 Intelligent Recipe Generation: Leverages the advanced Gemini model to create unique and delicious recipes.
 
-Dynamic and Personalized: Get recipe ideas based on your specific ingredients, dietary preferences, or meal types (e.g., "vegetarian pasta," "quick dinner," "low-carb breakfast").
+🥗 Dynamic & Personalized: Get recipes based on your specific ingredients, dietary needs (vegetarian, low-carb), or meal types (quick dinner, healthy breakfast).
 
-Clear Instructions: Recipes include ingredients, step-by-step instructions, and nutritional information for a complete guide.
+📋 Complete Guidance: Each recipe includes a detailed ingredient list, step-by-step instructions, and nutritional information.
 
-User-Friendly Interface: A clean and intuitive UI makes it easy to use for anyone.
+💻 User-Friendly Interface: A clean and intuitive UI built with Streamlit makes finding your next meal a breeze.
 
-🚀 How to Run Locally
-Follow these steps to get a copy of the project up and running on your local machine.
+🛠️ Tech Stack
+Backend: Python
+
+AI Model: Google Gemini Pro
+
+Frontend: Streamlit
+
+API Key Management: python-dotenv
+
+🚀 Getting Started
+Follow these steps to get the project running on your local machine.
 
 Prerequisites
-You'll need a Google Gemini API key. If you don't have one, you can get one from the Google AI Studio.
-
 Python 3.8+
 
-pip
+A Google Gemini API key. You can get one from Google AI Studio.
 
-Installation
-Clone the repository to your local machine:
-
-Bash
-
-'''git clone https://github.com/TanmayDawande/ByteByteTaught.git
-cd ByteByteTaught'''
-Create a virtual environment and activate it (optional but recommended):
+Installation & Setup
+Clone the repository:
 
 Bash
+```
+git clone https://github.com/TanmayDawande/ByteByteTaught.git
+cd ByteByteTaught
+```
+Create and activate a virtual environment (recommended):
 
+On Windows:
+
+Bash
+```
 python -m venv venv
-# On Windows
 venv\Scripts\activate
-# On macOS/Linux
+```
+On macOS/Linux:
+
+Bash
+```
+python -m venv venv
 source venv/bin/activate
-Install the required Python packages:
-
+Install the required packages:
+```
 Bash
-
+```
 pip install -r requirements.txt
-Create a .env file in the root directory of the project and add your Gemini API key:
-
+```
+Set up your environment variables:
+Create a file named '.env' in the root project directory and add your API key:
+```
 GOOGLE_API_KEY="YOUR_API_KEY_HERE"
-Running the App
-Run the following command from your terminal:
+```
+Run the Streamlit app:
 
 Bash
-
+```
 streamlit run main.py
-This will open the application in your default web browser.
+```
+The application will open in your default web browser.
 
-📄 Code Snippet
-The core of the application uses the Gemini API to generate content. Here's a look at how it works:
+📄 Core Logic Snippet
+The app takes user input from the Streamlit interface and dynamically builds a prompt for the Gemini API.
 
 Python
 
 import google.generativeai as genai
 import streamlit as st
 
-# ... (setup and UI code) ...
+# ... (setup and API key configuration) ...
+
+# Get user input from a text box
+user_input = st.text_input("Enter ingredients or meal type:", "chicken, rice, broccoli")
 
 if st.button("Generate Recipe"):
     with st.spinner("Cooking up a delicious recipe..."):
-        prompt = "What are some healthy dinner ideas? Include ingredients, instructions, and nutritional information."
+        # Create a dynamic prompt with the user's input
+        prompt = f"""
+        Generate a healthy recipe based on the following: '{user_input}'.
+        Please provide:
+        1. A creative recipe title.
+        2. A list of ingredients.
+        3. Step-by-step instructions.
+        4. A brief nutritional information summary (calories, protein, etc.).
+        """
         try:
+            model = genai.GenerativeModel('gemini-pro')
             response = model.generate_content(prompt)
-            st.write(response.text)
+            st.markdown(response.text)
         except Exception as e:
             st.error(f"An error occurred: {e}")
 🤝 Contributing
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+Contributions, issues, and feature requests are welcome! Please check the issues page.
 
 📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Remember to:
-Replace your-username/your-repo-name with your actual GitHub username and repository name.
-
-Make sure you have a requirements.txt file listing all the Python libraries (e.g., streamlit, google-generativeai, python-dotenv). You can generate this with pip freeze > requirements.txt.
-
-Replace your_app_file_name.py with the name of your main Python script (e.g., app.py or recipe_generator.py).
-
-Create a LICENSE file if you don't have one, as it's good practice for open-source projects.
+This project is licensed under the MIT License. See the LICENSE file for details.
