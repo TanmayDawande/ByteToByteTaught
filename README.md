@@ -7,7 +7,7 @@
 Tired of staring at your fridge wondering what to make? This AI-powered recipe generator, built with Streamlit and the Google Gemini API, creates healthy and personalized recipes from the ingredients you already have.
 
 A quick demo of the AI Recipe Generator in action.
-![](https://github.com/ByteToByteTaught/GIF.gif)
+![](https://github.com/ByteToByteTaught/ByteByteTaught/raw/main/assets/GIF.gif)
 
 ## ✨ Features
 👨‍🍳 Intelligent Recipe Generation: Leverages the advanced Gemini model to create unique and delicious recipes.
