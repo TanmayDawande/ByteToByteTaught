@@ -7,17 +7,18 @@
 Tired of staring at your fridge wondering what to make? This AI-powered recipe generator, built with Streamlit and the Google Gemini API, creates healthy and personalized recipes from the ingredients you already have.
 
 A quick demo of the AI Recipe Generator in action.
+![](https://github.com/ByteToByte/GIF.gif)
 
-##✨ Features
+## ✨ Features
 👨‍🍳 Intelligent Recipe Generation: Leverages the advanced Gemini model to create unique and delicious recipes.
 
-#🥗 Dynamic & Personalized: Get recipes based on your specific ingredients, dietary needs (vegetarian, low-carb), or meal types (quick dinner, healthy breakfast).
+### 🥗 Dynamic & Personalized: Get recipes based on your specific ingredients, dietary needs (vegetarian, low-carb), or meal types (quick dinner, healthy breakfast).
 
-#📋 Complete Guidance: Each recipe includes a detailed ingredient list, step-by-step instructions, and nutritional information.
+### 📋 Complete Guidance: Each recipe includes a detailed ingredient list, step-by-step instructions, and nutritional information.
 
-#💻 User-Friendly Interface: A clean and intuitive UI built with Streamlit makes finding your next meal a breeze.
+### 💻 User-Friendly Interface: A clean and intuitive UI built with Streamlit makes finding your next meal a breeze.
 
-#🛠️ Tech Stack
+### 🛠️ Tech Stack
 Backend: Python
 
 AI Model: Google Gemini Pro
@@ -26,7 +27,7 @@ Frontend: Streamlit
 
 API Key Management: python-dotenv
 
-##🚀 Getting Started
+## 🚀 Getting Started
 Follow these steps to get the project running on your local machine.
 
 Prerequisites
@@ -76,7 +77,7 @@ streamlit run main.py
 ```
 The application will open in your default web browser.
 
-##📄 Core Logic Snippet
+## 📄 Core Logic Snippet
 The app takes user input from the Streamlit interface and dynamically builds a prompt for the Gemini API.
 
 Python
