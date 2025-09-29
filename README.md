@@ -1,4 +1,4 @@
-###### AI Recipe Generator 🍳
+# AI Recipe Generator 🍳
 <p align="center">
 <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit Badge">
 <img src="https://img.shields.io/badge/Google_Gemini-3F83F8?style=for-the-badge&logo=google&logoColor=white" alt="Gemini API Badge">
