@@ -1,4 +1,4 @@
-AI Recipe Generator 🍳
+###AI Recipe Generator 🍳
 <p align="center">
 <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit Badge">
 <img src="https://img.shields.io/badge/Google_Gemini-3F83F8?style=for-the-badge&logo=google&logoColor=white" alt="Gemini API Badge">
@@ -8,16 +8,16 @@ Tired of staring at your fridge wondering what to make? This AI-powered recipe g
 
 A quick demo of the AI Recipe Generator in action.
 
-✨ Features
+##✨ Features
 👨‍🍳 Intelligent Recipe Generation: Leverages the advanced Gemini model to create unique and delicious recipes.
 
-🥗 Dynamic & Personalized: Get recipes based on your specific ingredients, dietary needs (vegetarian, low-carb), or meal types (quick dinner, healthy breakfast).
+#🥗 Dynamic & Personalized: Get recipes based on your specific ingredients, dietary needs (vegetarian, low-carb), or meal types (quick dinner, healthy breakfast).
 
-📋 Complete Guidance: Each recipe includes a detailed ingredient list, step-by-step instructions, and nutritional information.
+#📋 Complete Guidance: Each recipe includes a detailed ingredient list, step-by-step instructions, and nutritional information.
 
-💻 User-Friendly Interface: A clean and intuitive UI built with Streamlit makes finding your next meal a breeze.
+#💻 User-Friendly Interface: A clean and intuitive UI built with Streamlit makes finding your next meal a breeze.
 
-🛠️ Tech Stack
+#🛠️ Tech Stack
 Backend: Python
 
 AI Model: Google Gemini Pro
@@ -26,7 +26,7 @@ Frontend: Streamlit
 
 API Key Management: python-dotenv
 
-🚀 Getting Started
+##🚀 Getting Started
 Follow these steps to get the project running on your local machine.
 
 Prerequisites
@@ -76,7 +76,7 @@ streamlit run main.py
 ```
 The application will open in your default web browser.
 
-📄 Core Logic Snippet
+##📄 Core Logic Snippet
 The app takes user input from the Streamlit interface and dynamically builds a prompt for the Gemini API.
 
 Python
@@ -106,8 +106,8 @@ if st.button("Generate Recipe"):
             st.markdown(response.text)
         except Exception as e:
             st.error(f"An error occurred: {e}")
-🤝 Contributing
+##🤝 Contributing
 Contributions, issues, and feature requests are welcome! Please check the issues page.
 
-📝 License
+$$📝 License
 This project is licensed under the MIT License. See the LICENSE file for details.
